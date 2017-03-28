@@ -11,18 +11,21 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="scss">
     @import url(https://fonts.googleapis.com/css?family=Lato:300);
 
-    *
-        margin: 0
-        padding: 0
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-    div
-        height: 100vh
-        overflow: hidden
-        &#app
-            background: #8b8bff
+    div {
+        height: 100vh;
+        overflow: hidden;
+        &#app {
+            background: #8b8bff;
+        }
+    }
 
     /*align-items: center;*/
     /*background: radial-gradient(*/

@@ -1,10 +1,11 @@
 <template>
     <div>
-        <notebook></notebook>
-        <div class="sidebar"></div>
-        <note></note>
-        <div class="sidebar"></div>
-        <div class="ghostbar"></div>
+        <notebook>
+            <div class="sidebar"></div>
+        </notebook>
+        <note>
+            <div class="sidebar"></div>
+        </note>
         <editor></editor>
     </div>
 </template>
@@ -23,19 +24,5 @@
   }
 </script>
 
-<style scoped lang="sass">
-    .sidebar
-        background-color: black
-        height: 100vh
-        float: right
-        width: 3px
-        cursor: col-resize
-
-    .ghostbar
-        width: 3px
-        background-color: #000
-        opacity: 0.5
-        position: absolute
-        cursor: col-resize
-        z-index: 999
+<style scoped lang="scss">
 </style>
