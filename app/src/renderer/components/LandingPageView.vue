@@ -1,30 +1,41 @@
 <template>
-  <div>
-    <img src="./LandingPageView/assets/logo.png" alt="electron-vue">
-    <h1>Welcome.</h1>
-    <current-page></current-page>
-    <versions></versions>
-    <links></links>
-  </div>
+    <div>
+        <notebook></notebook>
+        <div class="sidebar"></div>
+        <note></note>
+        <div class="sidebar"></div>
+        <div class="ghostbar"></div>
+        <editor></editor>
+    </div>
 </template>
 
 <script>
-  import CurrentPage from './LandingPageView/CurrentPage'
-  import Links from './LandingPageView/Links'
-  import Versions from './LandingPageView/Versions'
+  import Notebook from './LandingPageView/Notebook.vue'
+  import Note from './LandingPageView/Note.vue'
+  import Editor from './LandingPageView/Editor.vue'
   export default {
     components: {
-      CurrentPage,
-      Links,
-      Versions
+      Notebook,
+      Note,
+      Editor
     },
     name: 'landing-page'
   }
 </script>
 
-<style scoped>
-  img {
-    margin-top: -25px;
-    width: 450px;
-  }
+<style scoped lang="sass">
+    .sidebar
+        background-color: black
+        height: 100vh
+        float: right
+        width: 3px
+        cursor: col-resize
+
+    .ghostbar
+        width: 3px
+        background-color: #000
+        opacity: 0.5
+        position: absolute
+        cursor: col-resize
+        z-index: 999
 </style>
